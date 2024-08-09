@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="final wd.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="sectionhome">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png" class="food-munch-logo" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-link active" id="navItem1" href="#featuredreceipesSection">
+                            Featured receipes
+                            <span class="sr-only">(current)</span>
+                        </a>
+                        <a class="nav-link" href="#trendingreceipesSection" id="navItem3">Trending receipes</a>
+                        <a class="nav-link" href="#followUsSection" id="navItem4">Follow Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+            <div class="text-center">
+                <h1 class="banner-heading mb-3">Get Delicious Food Recipe Anytime</h1>
+                <p class="banner-caption mb-4">Eat Smart & Healthy</p>
+                <button class="custom-button" onclick="display('sectionNew')">View Cuisines</button>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="featuredreceipesSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Featured Receipes</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Non-Veg Starters</h1>
+                            <button class="custom-button" onclick="display('sectionnonvegstarters')">View Dishes</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Veg Starters</h1>
+                            <button class="custom-button" onclick="display('sectionvegstarters')">View Dishes</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Soups</h1>
+                            <button class="custom-button" onclick="display('sectionsoup')">View Dishes</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Fish & Sea food</h1>
+                            <button class="custom-button" onclick="display('sectionfish')">View Dishes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="trendingreceipesSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" id="trendingreceipesSection">
+                        <h1 class="menu-section-heading">Trending Receipes</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Main Course</h1>
+                            <button class="custom-button" onclick="display('sectionmaincourse')">View Dishes</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Noodles</h1>
+                            <button class="custom-button" onclick="display('sectionnoodles')">View Dishes</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Salads</h1>
+                            <button class="custom-button" onclick="display('sectionsalad')">View Dishes</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Desserts</h1>
+                            <button class="custom-button" onclick="display('sectiondesserts')">View Dishes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="healthy-food-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-5">
+                        <div class="text-center">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/healthy-food-plate-img.png" class="healthy-food-section-img" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <h1 class="healthy-food-section-heading">
+                            Fresh, Healthy, Organic, Delicious Fruits
+                        </h1>
+                        <p class="healthy-food-section-description">
+                            Say no to harmful chemicals and go fully organic with our range of
+                            fresh fruits and veggies. Pamper your body and your senses with
+                            the true and unadulterated gifts from mother nature. with the true
+                            and unadulterated gifts from mother nature.
+                        </p>
+                        <button class="custom-button">Watch Video</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="thanking-customers-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                        <h1 class="thanking-customers-section-heading">
+                            Thank you for being a valuable reviewer to us.
+                        </h1>
+                        <p class="thanking-customers-section-description">
+                            We have a surprise gift for you
+                        </p>
+                        <div class="d-md-none">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                        </div>
+                        <div>
+                            <button class="custom-button">Redeem Gift</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5 d-none d-md-block">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="follow-us-section-heading">Follow Us</h1>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex flex-row justify-content-center">
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-twitter icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-instagram icon"></i>
+                            </div>
+                            <div class="follow-us-icon-container">
+                                <i class="fab fa-facebook icon"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-section pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="food-munch-logo" />
+                        <h1 class="footer-section-mail-id">explorereceipes@foodmunch.com</h1>
+                        <p class="footer-section-address">
+                            Chennai,India.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionNew">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaup9zeeL8Ghewpkls_o2RFysTY-8nKYxhjQ&s" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Indian Cuisines</h1>
+                        <a href="" class="menu-item-link">
+                            View Dishes
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://as1.ftcdn.net/v2/jpg/01/15/26/28/1000_F_115262838_Qdfwviyw9ATjw0TNnky95RjvKoQXprj5.jpg" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Chinese Cuisines</h1>
+                        <a href="" class="menu-item-link">
+                            View Dishes
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJDDq1iLXfXoLfgkVm6CJRNCgfHp--MyLbEg&s" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Italian Cuisines</h1>
+                        <a href="" class="menu-item-link">
+                            View Dishes
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBMMMvfqkJnmAUw2ffxy-psKlBVMTMyyyK4g&s" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">French Cuisines</h1>
+                        <a href="" class="menu-item-link">
+                            View Dishes
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="menu-item-card shadow p-3 mb-3">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTyZwzv1QXfZ9bAsKP16yrF7ymFUc-8-VroQ&s" class="menu-item-image w-100" />
+                        <h1 class="menu-card-title">Japanese Cuisines</h1>
+                        <a href="" class="menu-item-link">
+                            View Dishes
+                            <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionsoup">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://lh3.googleusercontent.com/t52vAU6NJrioYnPxwM9OfzZSY_b46pbRtu8ukgLvz9KiyUoK0pGbfnRuLVmdCCwm3py6LNgcFXpEzu50Qt7sSHg5zQ=s800" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Crab Soup</h1>
+                <button class="custom-button" onclick="display('sectioncarbsoup')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t4.ftcdn.net/jpg/00/82/08/79/360_F_82087975_DG2YNlNAQfZySfsiQASz3PQyJXlpzqp3.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Veg Soup</h1>
+                <button class="custom-button" onclick="display('sectionvegsoup')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t4.ftcdn.net/jpg/04/72/62/29/360_F_472622913_00rkwfTqr8kuBjq7Y9glR0yTJlLsrrLG.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Chicken Soup</h1>
+                <button class="custom-button" onclick="display('sectionchickensoup')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t3.ftcdn.net/jpg/04/51/83/44/360_F_451834460_CVuPSmRPMGCCE1G3qMnjhFlPQpJH9l4u.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mutton Bone Soup</h1>
+                <button class="custom-button" onclick="display('sectionmuttonbonesoup')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://www.indianveggiedelight.com/wp-content/uploads/2020/09/creamy-mushroom-soup-featured.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Creamy Mushroom Soup</h1>
+                <button class="custom-button" onclick="display('sectioncreamymushroomsoup')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionnonvegstarters">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlpfM03o88bHcIBzF1gJdDhziXw1V8HanmQg&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Chicken 65</h1>
+                <button class="custom-button" onclick="display('sectionchicken65')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20240109/pngtree-indian-chilli-chicken-dry-served-in-a-plate-over-moody-background-image_15609001.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Chilli Chicken</h1>
+                <button class="custom-button" onclick="display('sectionchillichicken')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://www.licious.in/blog/wp-content/uploads/2022/02/shutterstock_1488206756-min-1.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Prawn Pepper Fry</h1>
+                <button class="custom-button" onclick="display('sectionprawnpepperfry')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo4xCqR8NX3la1nBn-THQ8stAQEhXJl8i1Pg&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mutton Chukka</h1>
+                <button class="custom-button" onclick="display('sectionmuttonchukka')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2024/2/391260232/ZI/HT/LK/190305657/f6aekm7z-500x500.jpeg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Crab Lollipop</h1>
+                <button class="custom-button" onclick="display('sectioncrablollipop')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionvegstarters">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t4.ftcdn.net/jpg/04/75/97/61/360_F_475976157_kJuc6KfyiDoaTfSFLt8CD9OlhPRrChfS.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Panner Chilli</h1>
+                <button class="custom-button" onclick="display('sectionpannerchilli')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://nishkitchen.com/wp-content/uploads/2018/08/Mushroom-Pepper-Fry-1B.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mushroom Pepper Fry</h1>
+                <button class="custom-button" onclick="display('sectionmushroompepperfry')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://geekrobocook.com/wp-content/uploads/2021/03/6.-Paneer-Tikka.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Panner Tikka</h1>
+                <button class="custom-button" onclick="display('sectionpannertikka')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://www.yummyfoodrecipes.com/resources/picture/org/Crunchy-Golden-Fried-Baby.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Golden Babycorn Fry</h1>
+                <button class="custom-button" onclick="display('sectiongoldenbabycornfry')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t3.ftcdn.net/jpg/04/47/95/48/360_F_447954890_nYoJ3Lm6OElMe0LogDry2KfHF4tXsfMw.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Gobi Manchurian</h1>
+                <button class="custom-button" onclick="display('sectiongobimanchurian')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionfish">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t4.ftcdn.net/jpg/03/10/87/21/360_F_310872181_q0V3bRGXCSESD5D0lcVcZtTm5AaC4YJk.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Fish Finger</h1>
+                <button class="custom-button" onclick="display('sectionfishfinger')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://images.news18.com/tamil/uploads/2023/06/fish_curry.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Vanjaram Gravy</h1>
+                <button class="custom-button" onclick="display('sectionvanjaramgravy')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBS41ZlbOniJdfJIVHA8ilQbRbx7i24DzibTwO76ziARCu8H5Myk1HwHKHRjtlkbab2tc&usqp=CAU" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Fish Fry</h1>
+                <button class="custom-button" onclick="display('sectionfishfry')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZDYybRkM3JpmvCj7Xf9CBRvwzWwuUdATo46spvGi9kgSdGRjuRyc36_zdd6-g6Tze4lCaRuUplSLKEGWwwXLryrJW_u7anLidQfxbbHEvkJQZHMQPY-I-ZwXBxJiRBypxCzGDrmchfg/s1600/shark+puttu.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Sura Puttu</h1>
+                <button class="custom-button" onclick="display('sectionsuraputtu')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t4.ftcdn.net/jpg/02/40/55/25/360_F_240552513_5Sd2yMNDCfzLHuF1eDlyqREum153wlns.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Fish Tandoor</h1>
+                <button class="custom-button" onclick="display('sectionfishtandoor')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionnoodles">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bfLdgqTByMsFZQ3DhrWEDPALz9Ojg7XD2g&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Veg Noodles</h1>
+                <button class="custom-button" onclick="display('sectionvegnoodles')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8UA8XHBanMyzMYNa8skivmFqFUu008K4NZQ&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Panner Noodles</h1>
+                <button class="custom-button" onclick="display('sectionpannernoodles')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh_iNtiOuxMi0H1-PQO2QtE6B2c_uM7vnk1g&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mixed Non-Veg Noodles</h1>
+                <button class="custom-button" onclick="display('sectionmixednonvegnoodles')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://img.freepik.com/free-photo/udon-noodles-with-chicken-peppers-japanese-cuisine_2829-11266.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Chicken Noodles</h1>
+                <button class="custom-button" onclick="display('sectionchickennoodles')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2022/07/egg-fried-noodles-recipe.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Egg Noodles</h1>
+                <button class="custom-button" onclick="display('sectioneggnoodles')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionmaincourse">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://media.istockphoto.com/id/179085494/photo/indian-biryani.jpg?s=612x612&w=0&k=20&c=VJAUfiuavFYB7PXwisvUhLqWFJ20-9m087-czUJp9Fs=" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Veg Biryani</h1>
+                <button class="custom-button" onclick="display('sectionvegbiryani')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t4.ftcdn.net/jpg/05/17/96/89/360_F_517968988_hFHjQT6Flfksjx8n0KxfvMtP2tqlmGKk.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mutton Biryani</h1>
+                <button class="custom-button" onclick="display('sectionmuttonbiryani')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://t3.ftcdn.net/jpg/04/41/20/18/360_F_441201852_XQqp1wbAQj9udOC3iT7D0ahKgaf71bns.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Chicken Biryani</h1>
+                <button class="custom-button" onclick="display('sectionchickenbiryani')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://media.istockphoto.com/id/1334383300/sv/foto/fish-biryani-spicy-and-delicious-malabar-biryani-or-hydrabadi-biryani-dum-biriyani.jpg?s=612x612&w=0&k=20&c=qRg54FDw-IS_vDV-SM4LEcK37lvcvQUprLfNw9i8IR0=" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Fish Biryani</h1>
+                <button class="custom-button" onclick="display('sectionfishbiryani')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://www.cookwithkushi.com/wp-content/uploads/2015/09/best_quick_easy_veg_mushroom_biryani.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mushroom Biryani</h1>
+                <button class="custom-button" onclick="display('sectionmushroombiryani')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionsalad">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://static.toiimg.com/thumb/53226657.cms?width=1200&height=900" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Corn Salad</h1>
+                <button class="custom-button" onclick="display('sectioncornsalad')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://img.freepik.com/free-photo/top-view-delicious-fruit-salad-inside-plate-with-fresh-fruits-gray-fruit-tree-exotic-tropical-photo-ripe-diet_140725-109945.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Fruit Salad</h1>
+                <button class="custom-button" onclick="display('sectionfruitsalad')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://img.freepik.com/premium-photo/healthy-fresh-vegetable-salad-with-tomatoes-cucumbers-bell-peppers-plate-white-wooden-background_165656-1378.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Vegetable Salad</h1>
+                <button class="custom-button" onclick="display('sectionvegetablesalad')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectiondesserts">
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJQQoqXGaa1YzZwQQFOdN6K6iBHOqDBOQ4XA&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Mousse</h1>
+                <button class="custom-button" onclick="display('sectionmousse')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn1diZlXCIvheW_eUZBXyZUW_6AR_3vZQ4DA&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Brownie</h1>
+                <button class="custom-button" onclick="display('sectionbrownie')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_lalaW7j4RFVvItBfnzhZHT9UyhfePbZLig&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Ice Cream</h1>
+                <button class="custom-button" onclick="display('sectionicecream')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://media-cdn.tripadvisor.com/media/photo-s/12/63/d1/b0/sizzling-brownie.jpg" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Sizzler</h1>
+                <button class="custom-button" onclick="display('sectionsizzler')">View Recipe</button>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpJeNR-PVqtVPBEwR5KMaXcSYpZWIhS_hmQg&s" class="menu-item-image w-100" />
+                <h1 class="menu-card-title">Smoothie</h1>
+                <button class="custom-button" onclick="display('sectionsmoothie')">View Recipe</button>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionhome')">Back</button>
+    </div>
+    <div id="sectionchicken65">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">boneless chicken pieces, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala, salt, cornflour, rice flour, oil for deep frying, fresh curry leaves, green chilies, garlic, lemon wedges, and fresh coriander for garnish.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    Chicken 65 is a popular spicy, deep-fried chicken dish from South India. To prepare it, marinate chicken pieces in a mixture of yogurt, ginger-garlic paste, red chili powder, turmeric, garam masala, and salt for at least an hour. Coat the marinated chicken with cornflour and rice flour, then deep-fry until golden and crispy. In a separate pan, sauté curry leaves, green chilies, and garlic in oil, then toss the fried chicken in this mixture. Serve hot, garnished with lemon wedges and fresh coriander.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">Calories: 400-450 kcal <br />
+                    Protein: 25-30 grams <br />
+                    Fat: 25-30 grams <br />
+                    Carbohydrates: 10-15 grams <br />
+                    Fiber: 1-2 grams <br />
+                    Cholesterol: 100-120 mg <br />
+                    Sodium: 500-700 mg</p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionnonvegstarters')">Back</button>
+    </div>
+    <div id="sectionchillichicken">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">boneless chicken pieces, soy sauce, green chili sauce, red chili sauce, vinegar, cornstarch, egg, bell peppers (capsicum), onions, green chilies, garlic, ginger, spring onions, salt, black pepper, sugar, and oil for frying. Optionally, you can add a pinch of MSG (Ajinomoto) for enhanced flavor.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To prepare Chilli Chicken, marinate boneless chicken pieces with soy sauce, green chili sauce, red chili sauce, vinegar, cornstarch, egg, salt, and black pepper for about 30 minutes. Deep-fry the marinated chicken until golden and crispy. In a separate pan, heat oil and sauté chopped garlic, ginger, green chilies, diced onions, and bell peppers until slightly tender. Add the fried chicken, along with additional soy sauce, chili sauces, vinegar, a pinch of sugar, and adjust salt and pepper to taste. Stir-fry for a few minutes until the chicken is well-coated with the sauce. Garnish with chopped spring onions and serve hot.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">Calories: 350-400 kcal<br />
+                    Protein: 25-30 grams<br />
+                    Fat: 20-25 grams<br />
+                    Carbohydrates: 10-15 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 90-110 mg<br />
+                    Sodium: 800-1000 mg</p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionnonvegstarters')">Back</button>
+    </div>
+    <div id="sectionprawnpepperfry">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">fresh prawns, black pepper powder, turmeric powder, red chili powder, ginger-garlic paste, curry leaves, chopped onions, green chilies, tomato, mustard seeds, fennel seeds, cumin seeds, oil, and salt. Optionally, you can garnish with fresh coriander leaves and lemon wedges.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To prepare Prawn Pepper Fry, start by marinating the prawns with turmeric powder, red chili powder, and salt for about 15 minutes. In a pan, heat oil and add mustard seeds, fennel seeds, and cumin seeds until they splutter. Add chopped onions, green chilies, and curry leaves, and sauté until the onions turn golden brown. Stir in ginger-garlic paste and cook until the raw smell disappears. Add chopped tomatoes and cook until they soften. Add the marinated prawns and cook for a few minutes until they turn pink and are cooked through. Sprinkle black pepper powder and mix well. Cook for another 2-3 minutes until the prawns are well-coated with the spices. Garnish with fresh coriander leaves and serve hot, with lemon wedges on the side.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 250-300 kcal<br />
+                    Protein: 25-30 grams<br />
+                    Fat: 10-15 grams<br />
+                    Carbohydrates: 5-8 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 150-200 mg<br />
+                    Sodium: 600-800 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionnonvegstarters')">Back</button>
+    </div>
+    <div id="sectionmuttonchukka">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">mutton (goat meat), onions, tomatoes, ginger-garlic paste, green chilies, curry leaves, black pepper powder, turmeric powder, red chili powder, coriander powder, cumin powder, garam masala powder, salt, oil, and fresh coriander leaves for garnish.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Mutton Chukka, start by cooking mutton pieces with salt and turmeric powder until tender. In a separate pan, heat oil and sauté chopped onions, green chilies, and curry leaves until onions turn golden brown. Add ginger-garlic paste and cook until the raw smell disappears. Stir in chopped tomatoes and cook until they soften. Add black pepper powder, red chili powder, coriander powder, cumin powder, and garam masala powder, and cook until the masala is fragrant. Then, add the cooked mutton pieces and fry until they are coated well with the masala. Cook for a few more minutes until the mutton is dry and gets a roasted texture. Garnish with fresh coriander leaves and serve hot.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 350-400 kcal<br />
+                    Protein: 25-30 grams<br />
+                    Fat: 20-25 grams<br />
+                    Carbohydrates: 5-10 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 100-150 mg<br />
+                    Sodium: 600-800 mg<br />
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionnonvegstarters')">Back</button>
+    </div>
+    <div id="sectioncrablollipop">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">crab meat (usually from crab claws or legs), bread crumbs, egg, ginger-garlic paste, green chilies, onions, coriander leaves, curry leaves, red chili powder, turmeric powder, garam masala powder, lemon juice, salt, oil for frying, and optional ingredients like cornflour for coating and chaat masala for extra flavor.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    crab meat (usually from crab claws or legs), bread crumbs, egg, ginger-garlic paste, green chilies, onions, coriander leaves, curry leaves, red chili powder, turmeric powder, garam masala powder, lemon juice, salt, oil for frying, and optional ingredients like cornflour for coating and chaat masala for extra flavor.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 150-200 kcal<br />
+                    Protein: 15-20 grams<br />
+                    Fat: 8-12 grams<br />
+                    Carbohydrates: 5-10 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 50-100 mg<br />
+                    Sodium: 400-600 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionnonvegstarters')">Back</button>
+    </div>
+    <div id="sectionpannerchilli">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">paneer (Indian cottage cheese), bell peppers (capsicum), onions, green chilies, garlic, ginger, soy sauce, green chili sauce, tomato ketchup, cornflour, all-purpose flour (maida), black pepper powder, salt, oil for frying, and garnishes like spring onions and coriander leaves.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Paneer Chilli, start by cutting paneer into cubes and marinating them with cornflour, all-purpose flour, salt, and black pepper powder. Then, shallow fry the paneer cubes until they turn golden brown and crispy. In a separate pan, heat oil and sauté chopped garlic, ginger, green chilies, and onions until they turn translucent. Add sliced bell peppers and cook until they are slightly tender. Then, add soy sauce, green chili sauce, and tomato ketchup, and mix well. Toss in the fried paneer cubes and stir until they are well coated with the sauce. Cook for a few minutes until everything is heated through. Garnish with chopped spring onions and coriander leaves. Serve hot as a delicious appetizer or side dish.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 250-300 kcal <br />
+                    Protein: 15-20 grams<br />
+                    Fat: 15-20 grams<br />
+                    Carbohydrates: 15-20 grams<br />
+                    Fiber: 2-3 grams<br />
+                    Cholesterol: 20-30 mg<br />
+                    Sodium: 800-1000 mg<br />
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionvegstarters')">Back</button>
+    </div>
+    <div id="sectionmushroompepperfry">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">fresh mushrooms, black pepper powder, turmeric powder, red chili powder, ginger-garlic paste, curry leaves, chopped onions, green chilies, bell peppers (optional), mustard seeds, cumin seeds, oil, and salt. Optionally, you can garnish with fresh coriander leaves and lemon wedges.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Mushroom Pepper Fry, start by heating oil in a pan and add mustard seeds and cumin seeds until they splutter. Add chopped onions, green chilies, and curry leaves, sautéing until the onions turn golden brown. Stir in ginger-garlic paste and cook until the raw smell disappears. Add sliced mushrooms and bell peppers (if using), along with turmeric powder, red chili powder, and salt. Cook until the mushrooms are tender and any released water evaporates. Finally, add black pepper powder and mix well. Garnish with fresh coriander leaves and serve hot, with lemon wedges on the side.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 100-150 kcal<br />
+                    Protein: 3-5 grams<br />
+                    Fat: 7-10 grams<br />
+                    Carbohydrates: 10-12 grams<br />
+                    Fiber: 2-3 grams<br />
+                    Cholesterol: 0 mg<br />
+                    Sodium: 300-400 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionvegstarters')">Back</button>
+    </div>
+    <div id="sectionpannertikka">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">paneer (Indian cottage cheese) cubes, yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala powder, cumin powder, coriander powder, chaat masala, lemon juice, salt, oil, and skewers. Optionally, you can include diced bell peppers and onions for added flavor and presentation.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Paneer Tikka, start by preparing a marinade with yogurt, ginger-garlic paste, red chili powder, turmeric powder, garam masala powder, cumin powder, coriander powder, chaat masala, lemon juice, salt, and a little oil. Mix well and coat the paneer cubes (and optional diced bell peppers and onions) with this marinade. Let it sit for at least 30 minutes. Thread the marinated paneer and vegetables onto skewers. Grill or bake them in a preheated oven at 200°C (392°F) for about 15-20 minutes, turning occasionally until they are golden and slightly charred. Serve hot with mint chutney and lemon wedges.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 250-300 kcal<br />
+                    Protein: 15-20 grams<br />
+                    Fat: 15-20 grams<br />
+                    Carbohydrates: 8-12 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 30-50 mg<br />
+                    Sodium: 400-600 mg<br />
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionvegstarters')">Back</button>
+    </div>
+    <div id="sectiongoldenbabycornfry">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">babycorn, all-purpose flour (maida), cornflour, turmeric powder, red chili powder, black pepper powder, ginger-garlic paste, salt, water, and oil for frying. Optionally, you can add a pinch of chaat masala and garnish with fresh coriander leaves.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Golden Babycorn Fry, start by mixing all-purpose flour, cornflour, turmeric powder, red chili powder, black pepper powder, ginger-garlic paste, and salt in a bowl. Add water gradually to form a smooth batter. Dip each babycorn into the batter, ensuring they are well-coated. Heat oil in a deep pan and fry the coated babycorn until they turn golden and crispy. Remove and drain on paper towels. Optionally, sprinkle with chaat masala and garnish with fresh coriander leaves. Serve hot as a crispy appetizer or snack.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 200-250 kcal<br />
+                    Protein: 3-5 grams<br />
+                    Fat: 10-15 grams<br />
+                    Carbohydrates: 25-30 grams<br />
+                    Fiber: 2-3 grams<br />
+                    Cholesterol: 0 mg<br />
+                    Sodium: 300-400 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionvegstarters')">Back</button>
+    </div>
+    <div id="sectioncarbsoup">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description"> crab meat (or crab claws), chicken or vegetable broth, ginger, garlic, onions, carrots, celery, corn kernels, soy sauce, fish sauce, salt, black pepper, chili flakes (optional), lime juice, cilantro leaves, and spring onions for garnish.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Crab Soup, sauté chopped ginger, garlic, onions, carrots, and celery in a pot until softened. Add chicken or vegetable broth, crab meat, corn kernels, soy sauce, fish sauce, salt, black pepper, and chili flakes (if using). Simmer for about 15-20 minutes. Finish with a squeeze of lime juice. Garnish with cilantro leaves and chopped spring onions before serving. Adjust seasoning as needed.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 100-150 kcal<br />
+                    Protein: 10-15 grams<br />
+                    Fat: 3-5 grams<br />
+                    Carbohydrates: 10-15 grams<br />
+                    Fiber: 2-3 grams<br />
+                    Cholesterol: 30-50 mg<br />
+                    Sodium: 800-1000 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionsoup')">Back</button>
+    </div>
+    <div id="sectiongobimanchurian">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description"> cauliflower (gobi) florets, all-purpose flour (maida), cornflour, ginger-garlic paste, red chili powder, black pepper powder, soy sauce, tomato ketchup, green chili sauce, vinegar, sugar, salt, water, oil for frying, chopped garlic, chopped ginger, green chilies, chopped onions, chopped bell peppers (optional), and spring onions for garnish.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To prepare Gobi Manchurian, start by blanching cauliflower florets in hot water for a few minutes, then drain and set aside. In a bowl, mix all-purpose flour, cornflour, ginger-garlic paste, red chili powder, black pepper powder, soy sauce, tomato ketchup, green chili sauce, vinegar, sugar, salt, and water to form a thick batter. Dip each cauliflower floret into the batter and deep fry until golden brown and crispy. In a separate pan, heat oil and sauté chopped garlic, ginger, green chilies, onions, and bell peppers until they are slightly tender. Add soy sauce, tomato ketchup, and a little water to make a sauce. Toss the fried cauliflower florets in the sauce until well coated. Garnish with chopped spring onions and serve hot as a delicious appetizer or side dish.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 200-250 kcal<br />
+                    Protein: 4-6 grams<br />
+                    Fat: 10-15 grams<br />
+                    Carbohydrates: 20-25 grams<br />
+                    Fiber: 2-3 grams<br />
+                    Cholesterol: 0 mg<br />
+                    Sodium: 800-1000 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionvegstarters')">Back</button>
+    </div>
+    <div id="sectionvegsoup">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">vegetables such as carrots, potatoes, celery, onions, bell peppers, tomatoes, and green beans, vegetable broth or water, garlic, ginger, olive oil, salt, black pepper, dried herbs (such as thyme or oregano), and fresh herbs like parsley or cilantro for garnish.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Vegetable Soup, start by sautéing chopped garlic, ginger, and onions in olive oil until softened. Add diced carrots, potatoes, celery, bell peppers, tomatoes, and green beans, and sauté for a few minutes. Pour in vegetable broth or water, season with salt, black pepper, and dried herbs, and bring to a boil. Simmer until the vegetables are tender. Adjust seasoning as needed. Garnish with fresh herbs before serving. Enjoy your hearty and nutritious vegetable soup!
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 50-100 kcal<br />
+                    Protein: 1-3 grams<br />
+                    Fat: 1-3 grams<br />
+                    Carbohydrates: 10-15 grams<br />
+                    Fiber: 2-4 grams<br />
+                    Cholesterol: 0 mg<br />
+                    Sodium: 300-600 mg<br />
+                </p>
+            </div>
+        </div>
+        <div id="sectionchickensoup">
+            <div class="col-12">
+                <div class="menu-item-card shadow p-3 mb-3">
+                    <h1 class="healthy-food-section-heading">Ingredients</h1>
+                    <p class="healthy-food-section-description">chicken pieces (such as bone-in chicken thighs or breasts), chicken broth or water, onions, carrots, celery, garlic, bay leaves, salt, black pepper, olive oil, and fresh herbs like parsley or thyme for garnish. Optional ingredients include noodles, rice, or vegetables like potatoes or spinach.</p>
+                    <h1 class="healthy-food-section-heading">Recipe</h1>
+                    <p class="healthy-food-section-description">
+                        To make Chicken Soup, start by heating olive oil in a pot and sautéing chopped onions, carrots, celery, and garlic until softened. Add chicken pieces and brown them lightly. Pour in chicken broth or water, add bay leaves, salt, and black pepper, and bring to a boil. Reduce heat and simmer until the chicken is cooked through and vegetables are tender. Remove the chicken, shred or chop it, and return it to the pot. Adjust seasoning as needed. Garnish with fresh herbs before serving. Optional: Add noodles, rice, or vegetables for extra heartiness. Enjoy your comforting chicken soup!
+                    </p>
+                    <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                    <p class="bg-info text-white">
+                        Calories: 100-150 kcal<br />
+                        Protein: 10-15 grams<br />
+                        Fat: 3-5 grams<br />
+                        Carbohydrates: 5-10 grams<br />
+                        Fiber: 1-2 grams<br />
+                        Cholesterol: 20-40 mg<br />
+                        Sodium: 600-800 mg
+                    </p>
+                </div>
+            </div>
+            <button class="btn-success m-3" onclick="display('sectionsoup')">Back</button>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionsoup')">Back</button>
+    </div>
+    <div id="sectionmuttonbonesoup">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">mutton bones (such as neck bones or marrow bones), water, onions, carrots, celery, garlic, bay leaves, salt, black pepper, olive oil, and fresh herbs like parsley or thyme for garnish. Optional ingredients include ginger, turmeric, and other spices for additional flavor.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Mutton Bone Soup, start by rinsing the mutton bones thoroughly. In a large pot, heat olive oil and sauté chopped onions, carrots, celery, and garlic until they soften. Add the mutton bones, bay leaves, salt, and black pepper, and cover with water. Bring to a boil, then reduce heat and simmer, partially covered, for several hours until the meat is tender and falling off the bones. Skim off any foam that rises to the surface. Once done, remove the bones and vegetables from the soup. Season with more salt and pepper if needed. Garnish with fresh herbs before serving. Enjoy your nourishing mutton bone soup!
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 100-150 kcal<br />
+                    Protein: 10-15 grams<br />
+                    Fat: 5-10 grams<br />
+                    Carbohydrates: 1-5 grams<br />
+                    Fiber: 0-1 grams<br />
+                    Cholesterol: 20-40 mg<br />
+                    Sodium: 400-600 mg
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionsoup')">Back</button>
+    </div>
+    <div id="sectioncreamymushroomsoup">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">fresh mushrooms (such as button or cremini), butter, onions, garlic, flour, chicken or vegetable broth, heavy cream, salt, black pepper, and fresh herbs like thyme or parsley for garnish. Optional ingredients include white wine and a splash of soy sauce for added depth of flavor.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Creamy Mushroom Soup, melt butter in a pot and sauté chopped onions and garlic until translucent. Add sliced mushrooms and cook until golden brown. Stir in flour, then gradually add chicken or vegetable broth while stirring. Bring to a boil, reduce heat, and simmer for 10-15 minutes. Blend the soup to your desired consistency, then stir in heavy cream and heat through. Season with salt and black pepper, and garnish with fresh herbs before serving.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 150-200 kcal<br />
+                    Protein: 3-5 grams<br />
+                    Fat: 10-15 grams<br />
+                    Carbohydrates: 10-15 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 30-50 mg<br />
+                    Sodium: 500-700 mg<br />
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionsoup')">Back</button>
+    </div>
+    <div id="sectionfishfinger">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description"> fish fillets (such as cod, haddock, or tilapia), all-purpose flour, eggs, bread crumbs (panko or regular), salt, black pepper, paprika, garlic powder, lemon juice, and oil for frying. Optionally, you can add herbs like parsley or dill for extra flavor.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Fish Fingers, cut fish fillets into strips and marinate with salt, black pepper, paprika, garlic powder, and lemon juice. Dredge the fish strips in flour, dip them in beaten eggs, and coat with bread crumbs. Heat oil in a pan and fry the coated fish strips until golden and crispy. Drain on paper towels and serve hot with lemon wedges and dipping sauce.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 200-250 kcal <br />
+                    Protein: 15-20 grams<br />
+                    Fat: 10-15 grams<br />
+                    Carbohydrates: 10-15 grams<br />
+                    Fiber: 1-2 grams<br />
+                    Cholesterol: 50-70 mg<br />
+                    Sodium: 400-600 mg<br />
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionfish')">Back</button>
+    </div>
+    <div id="sectionvanjaramgravy">
+        <div class="col-12">
+            <div class="menu-item-card shadow p-3 mb-3">
+                <h1 class="healthy-food-section-heading">Ingredients</h1>
+                <p class="healthy-food-section-description">vanjaram fish (seer fish or kingfish) slices, onions, tomatoes, green chilies, garlic, ginger, tamarind pulp, turmeric powder, red chili powder, coriander powder, cumin powder, fenugreek seeds, mustard seeds, curry leaves, coconut milk (optional), salt, and oil. Optionally, you can add fresh coriander leaves for garnish.</p>
+                <h1 class="healthy-food-section-heading">Recipe</h1>
+                <p class="healthy-food-section-description">
+                    To make Vanjaram Fish Gravy, heat oil in a pan and sauté mustard seeds, fenugreek seeds, chopped onions, green chilies, garlic, and ginger until golden. Add chopped tomatoes, turmeric powder, red chili powder, coriander powder, and cumin powder, and cook until tomatoes soften. Add tamarind pulp, water, and salt, then bring to a boil. Add fish slices and simmer until fish is cooked. Optionally, add coconut milk for richness. Garnish with curry leaves and coriander leaves before serving.
+                </p>
+                <h1 class="healthy-food-section-heading">Nutritional Values</h1>
+                <p class="bg-info text-white">
+                    Calories: 250-300 kcal <br />
+                    Protein: 20-25 grams <br />
+                    Fat: 15-20 grams <br />
+                    Carbohydrates: 10-15 grams <br />
+                    Fiber: 2-3 grams <br />
+                    Cholesterol: 50-70 mg <br />
+                    Sodium: 600-800 mg <br />
+                </p>
+            </div>
+        </div>
+        <button class="btn-success m-3" onclick="display('sectionfish')">Back</button>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
